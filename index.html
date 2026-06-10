@@ -3,1053 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Melvin Garita | Banking Executive</title>
-    <meta name="description" content="Banking executive with two decades of progressive leadership across operations, strategy, capital markets, and governance in Central America's largest financial institution.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>About — Melvin Garita</title>
+    <meta name="description" content="Melvin Garita Mora — Banking Executive. Two decades of institutional leadership across operations, strategy, capital markets, and governance.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ============================================
-           DESIGN SYSTEM — MELVIN GARITA v4.0
-           Annual Report Aesthetic
-           ============================================ */
-        :root {
-            --navy: #1B2A4A;
-            --navy-light: #243556;
-            --navy-dark: #111D35;
-            --gold: #C9A96E;
-            --gold-light: #D4BA88;
-            --warm-gray: #F5F3F0;
-            --white: #FFFFFF;
-            --dark-text: #2D2D2D;
-            --medium-text: #5A5A5A;
-            --light-text: #8A8A8A;
-            --border-light: #E8E5E1;
-            --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--dark-text);
-            line-height: 1.7;
-            background-color: var(--white);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* ============================================
-           NAVIGATION
-           ============================================ */
-        .nav {
-            position: fixed; top: 0; left: 0; right: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.97);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-light);
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .nav-logo {
-            font-family: var(--font-heading);
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--navy);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 0.875rem;
-            font-weight: 400;
-            color: var(--medium-text);
-            text-decoration: none;
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover { color: var(--navy); }
-
-        .nav-links a.active {
-            color: var(--navy);
-            font-weight: 500;
-        }
-
-        .nav-cta {
-            font-size: 0.8rem !important;
-            font-weight: 500 !important;
-            color: var(--navy) !important;
-            border: 1px solid var(--navy);
-            padding: 0.5rem 1.25rem;
-            border-radius: 2px;
-            transition: all 0.2s;
-        }
-
-        .nav-cta:hover {
-            background: var(--navy);
-            color: var(--white) !important;
-        }
-
-        .nav-hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .nav-hamburger span {
-            width: 24px; height: 2px;
-            background: var(--navy);
-            transition: 0.3s;
-        }
-
-        /* ============================================
-           HERO
-           ============================================ */
-        .hero {
-            padding-top: 70px;
-            background: var(--navy);
-            color: var(--white);
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-image-wrapper {
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 460px;
-            aspect-ratio: 4/5;
-            object-fit: cover;
-            object-position: top center;
-            border-radius: 2px;
-        }
-
-        .hero-content { padding: 1rem 0; }
-
-        .hero-name {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            line-height: 1.15;
-            margin-bottom: 0.75rem;
-        }
-
-        .hero-title {
-            font-size: 1rem;
-            font-weight: 300;
-            color: var(--gold);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: 0.25rem;
-        }
-
-        .hero-subtitle {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 400;
-            font-style: italic;
-            color: rgba(255,255,255,0.8);
-            line-height: 1.5;
-        }
-
-        /* ============================================
-           SECTIONS — SHARED
-           ============================================ */
-        .section {
-            padding: 5rem 2rem;
-        }
-
-        .section-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section-wide {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section--gray { background: var(--warm-gray); }
-        .section--navy { background: var(--navy); color: var(--white); }
-        .section--white { background: var(--white); }
-
-        .section-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--gold);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-heading {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--navy);
-            letter-spacing: -0.02em;
-            line-height: 1.3;
-            margin-bottom: 2rem;
-        }
-
-        .section--navy .section-heading { color: var(--white); }
-
-        p { margin-bottom: 1.25rem; }
-        p:last-child { margin-bottom: 0; }
-
-        .text-muted { color: var(--medium-text); }
-
-        /* ============================================
-           OPENING
-           ============================================ */
-        .opening p {
-            font-size: 1.1rem;
-            line-height: 1.85;
-            color: var(--dark-text);
-        }
-
-        .opening p:first-child {
-            font-size: 1.2rem;
-            font-family: var(--font-heading);
-            font-style: italic;
-            color: var(--navy);
-            line-height: 1.75;
-        }
-
-        /* ============================================
-           CHAPTERS
-           ============================================ */
-        .chapters-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0;
-        }
-
-        .chapter {
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .chapter:last-child { border-bottom: none; }
-
-        .chapter-number {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--gold);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .chapter-title {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 0.35rem;
-            letter-spacing: -0.01em;
-        }
-
-        .chapter-period {
-            font-size: 0.85rem;
-            color: var(--light-text);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-
-        .chapter p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--medium-text);
-        }
-
-        /* ============================================
-           BOARD EXPERIENCE
-           ============================================ */
-        .board-intro {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: var(--medium-text);
-            margin-bottom: 2.5rem;
-        }
-
-        .board-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 3rem;
-        }
-
-        .board-table th {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--light-text);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            text-align: left;
-            padding: 0.75rem 1rem;
-            border-bottom: 2px solid var(--navy);
-        }
-
-        .board-table td {
-            font-size: 0.95rem;
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-light);
-            vertical-align: top;
-        }
-
-        .board-table td:first-child {
-            font-weight: 500;
-            color: var(--navy);
-        }
-
-        /* ============================================
-           TESTIMONIALS
-           ============================================ */
-        .testimonial {
-            padding: 2rem 0;
-            border-left: 3px solid var(--gold);
-            padding-left: 2rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .testimonial:last-child { margin-bottom: 0; }
-
-        .testimonial-text {
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            font-style: italic;
-            line-height: 1.75;
-            color: var(--dark-text);
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-author {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--navy);
-        }
-
-        .testimonial-role {
-            font-size: 0.8rem;
-            color: var(--light-text);
-            font-weight: 400;
-        }
-
-        /* ============================================
-           TEACHING
-           ============================================ */
-        .teaching p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: var(--medium-text);
-        }
-
-        .teaching strong {
-            color: var(--navy);
-            font-weight: 600;
-        }
-
-        /* ============================================
-           TABLES — EDUCATION, RECOGNITION, CAREER
-           ============================================ */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .data-table th {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--light-text);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            text-align: left;
-            padding: 0.75rem 1rem;
-            border-bottom: 2px solid var(--navy);
-        }
-
-        .data-table td {
-            font-size: 0.95rem;
-            padding: 0.85rem 1rem;
-            border-bottom: 1px solid var(--border-light);
-            vertical-align: top;
-        }
-
-        .data-table td:first-child {
-            font-weight: 500;
-            color: var(--navy);
-        }
-
-        .data-table .highlight {
-            color: var(--gold);
-            font-weight: 500;
-            font-size: 0.85rem;
-        }
-
-        .exec-education {
-            font-size: 0.9rem;
-            color: var(--medium-text);
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-light);
-        }
-
-        .exec-education strong {
-            color: var(--navy);
-            font-weight: 500;
-        }
-
-        /* ============================================
-           AT A GLANCE
-           ============================================ */
-        .glance-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0;
-            border: 1px solid var(--border-light);
-            border-radius: 2px;
-            overflow: hidden;
-        }
-
-        .glance-item {
-            padding: 1.25rem 1.5rem;
-            border-bottom: 1px solid var(--border-light);
-            border-right: 1px solid var(--border-light);
-        }
-
-        .glance-item:nth-child(2n) { border-right: none; }
-        .glance-item:nth-last-child(-n+2) { border-bottom: none; }
-
-        .glance-label {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--light-text);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            margin-bottom: 0.35rem;
-        }
-
-        .glance-value {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--navy);
-        }
-
-        /* ============================================
-           WHAT COMES NEXT
-           ============================================ */
-        .what-next {
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto;
-        }
-
-        .what-next p {
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
-            font-style: italic;
-            line-height: 1.7;
-            color: var(--dark-text);
-        }
-
-        /* ============================================
-           CTA SECTION
-           ============================================ */
-        .cta-section {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .cta-heading {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            font-weight: 500;
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .cta-sub {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.65);
-            font-style: italic;
-            max-width: 500px;
-            margin: 0 auto 2rem;
-            line-height: 1.7;
-        }
-
-        .cta-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .cta-links a {
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.03em;
-            transition: opacity 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .cta-links a:hover { opacity: 0.8; }
-
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            padding: 2.5rem 2rem;
-            background: var(--navy-dark);
-            color: rgba(255,255,255,0.4);
-            font-size: 0.8rem;
-            text-align: center;
-        }
-
-        .footer a {
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-        }
-
-        .footer a:hover { color: var(--gold); }
-
-        /* ============================================
-           ANIMATIONS
-           ============================================ */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 768px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
-                padding: 3rem 1.5rem;
-            }
-
-            .hero-image { max-width: 320px; }
-
-            .hero-name { font-size: 2.2rem; }
-            .hero-subtitle { font-size: 1.1rem; }
-
-            .section { padding: 3.5rem 1.5rem; }
-            .section-heading { font-size: 1.6rem; }
-
-            .chapter { padding: 2rem 0; }
-            .chapter-title { font-size: 1.25rem; }
-
-            .glance-grid { grid-template-columns: 1fr; }
-            .glance-item { border-right: none !important; }
-            .glance-item:last-child { border-bottom: none; }
-
-            .board-table, .data-table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-
-            .what-next p { font-size: 1.1rem; }
-
-            .nav-links { display: none; }
-            .nav-hamburger { display: flex; }
-
-            .nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 70px; left: 0; right: 0;
-                background: var(--white);
-                padding: 1.5rem 2rem;
-                border-bottom: 1px solid var(--border-light);
-                gap: 1rem;
-            }
-
-            .testimonial { padding-left: 1.25rem; }
+        :root{--navy:#1B2A4A;--gold:#C9A96E;--warm-gray:#F5F3F0;--white:#FFFFFF;--dark:#2D2D2D;--light-gray:#E8E6E3;--medium-gray:#6B7280}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;color:var(--dark);line-height:1.7;background:var(--white)}
+        h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;line-height:1.3}
+
+        /* NAV */
+        .nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid var(--light-gray);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+        .nav-logo{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--navy);text-decoration:none;font-weight:600}
+        .nav-links{display:flex;gap:2rem;align-items:center;list-style:none}
+        .nav-links a{text-decoration:none;color:var(--dark);font-size:.875rem;font-weight:400;letter-spacing:.02em;transition:color .2s}
+        .nav-links a:hover{color:var(--gold)}
+        .nav-links .nav-cta{background:var(--navy);color:var(--white);padding:.5rem 1.25rem;border-radius:4px;font-weight:500}
+        .nav-links .nav-cta:hover{background:var(--gold);color:var(--white)}
+        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px}
+        .hamburger span{width:24px;height:2px;background:var(--navy);transition:.3s}
+
+        /* HERO */
+        .hero{padding:10rem 2rem 5rem;background:var(--navy);color:var(--white);text-align:center}
+        .hero-photo{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);margin:0 auto 2rem;display:block}
+        .hero h1{font-size:2.5rem;margin-bottom:.5rem}
+        .hero .subtitle{font-size:1.1rem;color:var(--gold);font-family:'Inter',sans-serif;font-weight:400;letter-spacing:.05em}
+
+        /* SECTIONS */
+        .section{max-width:800px;margin:0 auto;padding:5rem 2rem}
+        .section-wide{max-width:1000px;margin:0 auto;padding:5rem 2rem}
+        .section-gray{background:var(--warm-gray)}
+        .section-navy{background:var(--navy);color:var(--white)}
+        .section h2{font-size:1.8rem;color:var(--navy);margin-bottom:1.5rem}
+        .section-navy h2{color:var(--gold)}
+        .section p{margin-bottom:1.25rem;font-size:1rem;color:#444}
+        .section-navy p{color:rgba(255,255,255,.85)}
+
+        /* OPENING */
+        .opening{font-size:1.05rem;line-height:1.8}
+        .opening p:first-child{font-size:1.15rem}
+
+        /* CHAPTERS */
+        .chapter{background:var(--white);border:1px solid var(--light-gray);border-radius:8px;padding:2.5rem;margin-bottom:2rem;transition:box-shadow .3s}
+        .chapter:hover{box-shadow:0 4px 20px rgba(0,0,0,.06)}
+        .chapter-number{font-family:'Playfair Display',serif;font-size:.85rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+        .chapter h3{font-size:1.4rem;color:var(--navy);margin-bottom:.5rem}
+        .chapter-period{font-size:.9rem;color:var(--medium-gray);margin-bottom:1.25rem;font-style:italic}
+        .chapter p{font-size:.95rem;color:#444;line-height:1.75}
+
+        /* BOARD */
+        .board-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+        .board-table th{text-align:left;padding:.75rem 1rem;background:var(--navy);color:var(--white);font-family:'Playfair Display',serif;font-weight:600;font-size:.9rem}
+        .board-table td{padding:.75rem 1rem;border-bottom:1px solid var(--light-gray);font-size:.9rem}
+        .board-narrative{font-size:.95rem;color:#555;margin:1.5rem 0;line-height:1.75;font-style:italic}
+
+        /* TESTIMONIAL */
+        .testimonial{background:var(--warm-gray);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;border-radius:0 8px 8px 0}
+        .testimonial p{font-size:.95rem;color:#444;font-style:italic;margin-bottom:.75rem}
+        .testimonial .author{font-size:.85rem;color:var(--navy);font-weight:600;font-style:normal}
+
+        /* TEACHING */
+        .teaching-highlight{display:inline-block;background:var(--gold);color:var(--white);padding:.15rem .6rem;border-radius:3px;font-size:.85rem;font-weight:600}
+
+        /* TABLES */
+        .info-table{width:100%;border-collapse:collapse;margin:1.5rem 0}
+        .info-table th{text-align:left;padding:.6rem 1rem;background:var(--navy);color:var(--white);font-family:'Playfair Display',serif;font-weight:600;font-size:.85rem}
+        .info-table td{padding:.6rem 1rem;border-bottom:1px solid var(--light-gray);font-size:.9rem;color:#444}
+        .info-table td:first-child{font-weight:500;color:var(--navy)}
+        .exec-ed{font-size:.9rem;color:#555;margin-top:1rem;padding:1rem;background:var(--warm-gray);border-radius:6px}
+        .exec-ed strong{color:var(--navy)}
+
+        /* AT A GLANCE */
+        .glance-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.5rem 0}
+        .glance-item{padding:1rem;background:var(--white);border:1px solid var(--light-gray);border-radius:6px}
+        .glance-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--medium-gray);margin-bottom:.25rem}
+        .glance-value{font-size:.95rem;font-weight:500;color:var(--navy)}
+
+        /* WHAT COMES NEXT */
+        .next{text-align:center;max-width:700px;margin:0 auto}
+        .next h2{color:var(--gold);margin-bottom:1.5rem}
+        .next p{font-size:1.1rem;color:rgba(255,255,255,.9);font-style:italic;line-height:1.8}
+
+        /* CTA */
+        .cta-section{text-align:center;padding:4rem 2rem;background:var(--white);border-top:1px solid var(--light-gray)}
+        .cta-section h3{font-size:1.4rem;color:var(--navy);margin-bottom:.75rem}
+        .cta-section p{color:var(--medium-gray);font-size:.95rem;margin-bottom:1.5rem}
+        .cta-links{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+        .cta-links a{text-decoration:none;color:var(--navy);font-weight:500;font-size:.9rem;padding:.6rem 1.5rem;border:1px solid var(--navy);border-radius:4px;transition:all .2s}
+        .cta-links a:hover{background:var(--navy);color:var(--white)}
+
+        /* FOOTER */
+        .footer{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;padding:2.5rem;font-size:.8rem}
+        .footer a{color:var(--gold);text-decoration:none}
+
+        /* ANIMATIONS */
+        .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+        .fade-in.visible{opacity:1;transform:translateY(0)}
+
+        /* MOBILE */
+        @media(max-width:768px){
+            .nav-links{display:none;position:absolute;top:64px;left:0;width:100%;background:var(--white);flex-direction:column;padding:1.5rem;gap:1rem;border-bottom:1px solid var(--light-gray)}
+            .nav-links.active{display:flex}
+            .hamburger{display:flex}
+            .hero{padding:7rem 1.5rem 3rem}
+            .hero h1{font-size:1.8rem}
+            .hero-photo{width:150px;height:150px}
+            .section,.section-wide{padding:3rem 1.5rem}
+            .chapter{padding:1.5rem}
+            .glance-grid{grid-template-columns:1fr}
+            .board-table,.info-table{font-size:.8rem}
         }
     </style>
-
-    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Melvin Garita Mora",
-        "jobTitle": "Deputy General Manager — Operations",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "Banco Nacional de Costa Rica"
-        },
-        "alumniOf": [
-            {"@type": "CollegeOrUniversity", "name": "Universidad de Costa Rica"},
-            {"@type": "CollegeOrUniversity", "name": "Instituto Tecnológico de Costa Rica"}
-        ],
-        "url": "https://melvingarita.com/about",
-        "sameAs": ["https://linkedin.com/in/melvingarita"],
-        "knowsAbout": ["Banking", "Institutional Leadership", "Capital Markets", "Corporate Governance", "Strategy Execution"]
-    }
+    {"@context":"https://schema.org","@type":"Person","name":"Melvin Garita Mora","jobTitle":"Deputy General Manager — Operations","worksFor":{"@type":"Organization","name":"Banco Nacional de Costa Rica"},"alumniOf":[{"@type":"EducationalOrganization","name":"Universidad de Costa Rica"},{"@type":"EducationalOrganization","name":"Instituto Tecnológico de Costa Rica"}],"url":"https://melvingarita.com","sameAs":["https://linkedin.com/in/melvingarita"]}
     </script>
 </head>
 <body>
 
-    <!-- ============================================
-         NAVIGATION
-         ============================================ -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">Melvin Garita</a>
-            <div class="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-                <span></span><span></span><span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/cases">Cases</a></li>
-                <li><a href="/approach">Approach</a></li>
-                <li><a href="/thoughts">Thoughts</a></li>
-                <li><a href="/about" class="active">About</a></li>
-                <li><a href="#connect" class="nav-cta">Connect</a></li>
-            </ul>
+<!-- NAV -->
+<nav class="nav">
+    <a href="/" class="nav-logo">Melvin Garita</a>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/cases">Cases</a></li>
+        <li><a href="/approach">Approach</a></li>
+        <li><a href="/thoughts">Thoughts</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="#connect" class="nav-cta">Connect</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="https://melvingarita.com/MG.jpeg" alt="Melvin Garita Mora" class="hero-photo">
+    <h1>Melvin Garita Mora</h1>
+    <p class="subtitle">Banking Executive &middot; Institutional Leadership at Scale</p>
+</section>
+
+<!-- OPENING -->
+<section class="section fade-in">
+    <div class="opening">
+        <p>I grew up on Costa Rica&rsquo;s Caribbean coast and left home at eighteen to study economics. Entering large organizations from the outside shaped how I learned to understand them &mdash; first by observing them, and eventually by leading them.</p>
+        <p>Twenty years later, I lead operations at one of the largest banks in Central America &mdash; overseeing 1,700 professionals and the daily execution infrastructure of a USD 17 billion institution.</p>
+        <p>The distance between those two points is not a story of methodology or frameworks. It is a story of progressive institutional complexity &mdash; each role larger, each institution more demanding, each decision carrying greater consequence. The thread that connects them is a consistent focus on one problem: why do institutions with sound strategies still underperform? After two decades, my answer has not changed &mdash; it is almost never the strategy. It is the distance between boardroom intent and organizational reality.</p>
+    </div>
+</section>
+
+<!-- FOUR CHAPTERS -->
+<section class="section-wide section-gray">
+    <div style="max-width:800px;margin:0 auto;padding:5rem 2rem">
+        <h2 style="text-align:center;margin-bottom:3rem">Four Chapters</h2>
+
+        <div class="chapter fade-in">
+            <div class="chapter-number">Chapter I</div>
+            <h3>The Quantitative Foundation</h3>
+            <p class="chapter-period">2004&ndash;2015 &middot; Capital Markets &middot; Analyst to Head of Trading Desks</p>
+            <p>I began in capital markets &mdash; analyzing risk, pricing securities, and eventually managing approximately one-third of Banco Nacional&rsquo;s intermediation economics (~USD 218M annually). A Master&rsquo;s in Applied Mathematics was not an academic pursuit; it was a deliberate investment in thinking about institutions the way I think about complex systems &mdash; with precision, with models, and with a healthy respect for what the models cannot capture. This period built the financial acuity that still informs how I evaluate risk, allocate resources, and assess strategic tradeoffs at enterprise level.</p>
         </div>
-    </nav>
 
-    <!-- ============================================
-         BLOCK 1: HERO
-         ============================================ -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-image-wrapper">
-                <img src="https://melvingarita.com/MG.jpeg"
-                     alt="Melvin Garita Mora — Banking Executive"
-                     class="hero-image">
-            </div>
-            <div class="hero-content">
-                <p class="hero-title">About</p>
-                <h1 class="hero-name">Melvin Garita Mora</h1>
-                <p class="hero-subtitle">Banking Executive &middot; Institutional Leadership at Scale</p>
-            </div>
+        <div class="chapter fade-in">
+            <div class="chapter-number">Chapter II</div>
+            <h3>The First Turnaround</h3>
+            <p class="chapter-period">2005&ndash;2013 &middot; LAFISE Valores &middot; Analyst to Interim CEO</p>
+            <p>Over nearly a decade, I progressed from analyst to leadership at a brokerage firm that would eventually need rescuing. When BANEX Valores ranked last in the industry by profitability, I led the turnaround &mdash; taking ROE from -11.5% to 7.3% and restoring the firm to above-average performance within twelve months, with limited resources and no institutional safety net. It was formative in the most direct sense: I learned that institutional leadership under constraint is fundamentally different from leadership with abundant resources. Discipline replaces ambition as the primary operating principle. That distinction has stayed with me.</p>
         </div>
-    </section>
 
-    <!-- ============================================
-         BLOCK 2: OPENING
-         ============================================ -->
-    <section class="section section--white">
-        <div class="section-container opening fade-in">
-            <p>I grew up on Costa Rica&rsquo;s Caribbean coast and left home at eighteen to study economics. Entering large organizations from the outside shaped how I learned to understand them &mdash; first by observing them, and eventually by leading them.</p>
-
-            <p>Twenty years later, I lead operations at the country&rsquo;s largest bank &mdash; overseeing 1,700 professionals and the daily execution infrastructure of a USD&nbsp;17&nbsp;billion institution.</p>
-
-            <p>The distance between those two points is not a story of methodology or frameworks. It is a story of progressive institutional complexity &mdash; each role larger, each institution more demanding, each decision carrying greater consequence. The thread that connects them is a consistent focus on one problem: why do institutions with sound strategies still underperform? After two decades, my answer has not changed &mdash; it is almost never the strategy. It is the distance between boardroom intent and organizational reality.</p>
+        <div class="chapter fade-in">
+            <div class="chapter-number">Chapter III</div>
+            <h3>The CEO Chapter</h3>
+            <p class="chapter-period">2018&ndash;2023 &middot; BN Valores &middot; General Manager (CEO)</p>
+            <p>This was the role that tested whether the principles I had developed could build something durable &mdash; not just rescue something broken. Over five years, I led BN Valores from a subsidiary without formal strategic planning to a nationally and internationally recognized benchmark. ROAE improved from 10.3% to 16.0%. The efficiency ratio dropped from 1.13 to 0.77. The organization reached the top decile of McKinsey&rsquo;s Organizational Health Index in Latin America. It earned the National Excellence Award and international recognition through the IBPC. More importantly, the leadership team I restructured and developed sustained the institution&rsquo;s performance trajectory beyond my tenure. That, more than any metric, is the measure I care about.</p>
         </div>
-    </section>
 
-    <!-- ============================================
-         BLOCK 3: FOUR CHAPTERS
-         ============================================ -->
-    <section class="section section--gray">
-        <div class="section-container">
-            <p class="section-label fade-in">Career as Narrative</p>
-            <h2 class="section-heading fade-in">Four Chapters</h2>
-
-            <div class="chapters-grid">
-
-                <!-- Chapter I -->
-                <div class="chapter fade-in">
-                    <p class="chapter-number">Chapter I</p>
-                    <h3 class="chapter-title">The Quantitative Foundation</h3>
-                    <p class="chapter-period">2004&ndash;2015 &middot; Analyst &rarr; Trader &rarr; Head of Trading Desks</p>
-                    <p>I began in capital markets &mdash; analyzing risk, pricing securities, and eventually managing approximately one-third of Banco Nacional&rsquo;s intermediation economics (~USD&nbsp;218M annually). A Master&rsquo;s in Applied Mathematics was not an academic pursuit; it was a deliberate investment in thinking about institutions the way I think about complex systems &mdash; with precision, with models, and with a healthy respect for what the models cannot capture. This period built the financial acuity that still informs how I evaluate risk, allocate resources, and assess strategic tradeoffs at enterprise level.</p>
-                </div>
-
-                <!-- Chapter II -->
-                <div class="chapter fade-in">
-                    <p class="chapter-number">Chapter II</p>
-                    <h3 class="chapter-title">The First Turnaround</h3>
-                    <p class="chapter-period">2005&ndash;2013 &middot; LAFISE Valores &middot; Analyst to Interim CEO</p>
-                    <p>Over nearly a decade, I progressed from analyst to leadership at a brokerage firm that would eventually need rescuing. When LAFISE Valores ranked last in the industry by profitability, I led the turnaround &mdash; restoring the firm to above-average performance within twelve months, with limited resources and no institutional safety net. It was formative in the most direct sense: I learned that institutional leadership under constraint is fundamentally different from leadership with abundant resources. Discipline replaces ambition as the primary operating principle. That distinction has stayed with me.</p>
-                </div>
-
-                <!-- Chapter III -->
-                <div class="chapter fade-in">
-                    <p class="chapter-number">Chapter III</p>
-                    <h3 class="chapter-title">The CEO Chapter</h3>
-                    <p class="chapter-period">2018&ndash;2023 &middot; BN Valores &middot; General Manager (CEO)</p>
-                    <p>This was the role that tested whether the principles I had developed could build something durable &mdash; not just rescue something broken. Over five years, I led BN Valores from a subsidiary without formal strategic planning to a nationally and internationally recognized benchmark. ROAE improved 56%. The efficiency ratio dropped from 1.13 to 0.77. The organization reached the top decile of McKinsey&rsquo;s Organizational Health Index in Latin America. It earned the National Excellence Award and international recognition through the International Best Practice Competition (IBPC). More importantly, the leadership team I restructured and developed sustained the institution&rsquo;s performance trajectory beyond my tenure. That, more than any metric, is the measure I care about.</p>
-                </div>
-
-                <!-- Chapter IV -->
-                <div class="chapter fade-in">
-                    <p class="chapter-number">Chapter IV</p>
-                    <h3 class="chapter-title">Institutional Scale</h3>
-                    <p class="chapter-period">2023&ndash;Present &middot; Banco Nacional de Costa Rica &middot; Deputy General Manager</p>
-                    <p>First in strategy, then in operations. Leading at this scale &mdash; 1,700+ professionals, ~USD&nbsp;160&nbsp;million in annual operating budget, the execution infrastructure of a USD&nbsp;17&nbsp;billion institution &mdash; changed how I understand leadership. At 71 people, a leader can see every connection between intent and execution. At this scale, the system must carry the discipline. My role became less about directing and more about ensuring the institutional architecture holds &mdash; connecting strategic objectives to operational delivery across an organization where misalignment compounds quietly and correction requires patience measured in years.</p>
-                </div>
-
-            </div>
+        <div class="chapter fade-in">
+            <div class="chapter-number">Chapter IV</div>
+            <h3>Institutional Scale</h3>
+            <p class="chapter-period">2023&ndash;Present &middot; Banco Nacional de Costa Rica &middot; Deputy General Manager</p>
+            <p>First in strategy, then in operations. Leading at this scale &mdash; 1,700+ professionals, ~USD 160 million in annual operating budget, the execution infrastructure of one of the largest banks in Central America (~USD 17B in assets) &mdash; changed how I understand leadership. At 71 people, a leader can see every connection between intent and execution. At this scale, the system must carry the discipline. My role became less about directing and more about ensuring the institutional architecture holds &mdash; connecting strategic objectives to operational delivery across an organization where misalignment compounds quietly and correction requires patience measured in years.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ============================================
-         BLOCK 4: BOARD EXPERIENCE
-         ============================================ -->
-    <section class="section section--white">
-        <div class="section-container fade-in">
-            <p class="section-label">Governance</p>
-            <h2 class="section-heading">Board Experience</h2>
+<!-- BOARD EXPERIENCE -->
+<section class="section fade-in">
+    <h2>Board Experience</h2>
+    <p class="board-narrative">Three directorships across distinct governance domains &mdash; each reflecting a deliberate expansion of scope and fiduciary responsibility.</p>
 
-            <p class="board-intro">Three directorships across distinct governance domains &mdash; each reflecting a deliberate expansion of scope and fiduciary responsibility.</p>
+    <table class="board-table">
+        <thead><tr><th>Board</th><th>Role</th><th>Period</th></tr></thead>
+        <tbody>
+            <tr><td><strong>BN Valores</strong></td><td>Board Director</td><td>2023 &ndash; Present</td></tr>
+            <tr><td><strong>BN Centro de Excelencia</strong></td><td>Board Director</td><td>2023 &ndash; Present</td></tr>
+            <tr><td><strong>Bolsa de Valores de Costa Rica</strong></td><td>Board Director</td><td>2021 &ndash; 2025</td></tr>
+        </tbody>
+    </table>
 
-            <table class="board-table">
-                <thead>
-                    <tr>
-                        <th>Board</th>
-                        <th>Role</th>
-                        <th>Period</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>BN Valores</td>
-                        <td>Board Director</td>
-                        <td>2023 &ndash; Present</td>
-                    </tr>
-                    <tr>
-                        <td>BN Centro de Excelencia</td>
-                        <td>Board Director</td>
-                        <td>2023 &ndash; Present</td>
-                    </tr>
-                    <tr>
-                        <td>Bolsa de Valores de Costa Rica</td>
-                        <td>Board Director</td>
-                        <td>2021 &ndash; 2025</td>
-                    </tr>
-                </tbody>
-            </table>
+    <p style="font-size:.95rem;color:#555;line-height:1.75;margin-top:1rem">These appointments span capital markets infrastructure, broker-dealer governance, and institutional performance oversight. The common thread is navigating the tension that defines board work: balancing short-term institutional pressures against long-term value creation, under fiduciary responsibility and regulatory complexity.</p>
 
-            <!-- Testimonials -->
-            <div class="testimonial">
-                <p class="testimonial-text">&ldquo;As a member of the board of directors of the National Stock Exchange Financial Group, Melvin Garita exercised leadership and commitment to ensure that the organization fulfilled its objectives, guiding it strategically with transparency and professionalism.&rdquo;</p>
-                <p class="testimonial-author">Alejandro Sol&oacute;rzano</p>
-                <p class="testimonial-role">Former Board Director, National Stock Exchange Financial Group; Former General Manager, Vida Plena Pension Fund Manager</p>
-            </div>
+    <div class="testimonial fade-in">
+        <p>&ldquo;As a member of the board of directors of the National Stock Exchange Financial Group, Melvin Garita exercised leadership and commitment to ensure that the organization fulfilled its objectives, guiding it strategically with transparency and professionalism.&rdquo;</p>
+        <div class="author">Alejandro Sol&oacute;rzano &mdash; Former Board Director, National Stock Exchange Financial Group; Former General Manager, Vida Plena Pension Fund Manager</div>
+    </div>
 
-            <div class="testimonial">
-                <p class="testimonial-text">&ldquo;For more than a decade, I have worked alongside Melvin on matters related to Costa Rica&rsquo;s securities and financial sector. Over the past four years, we have collaborated closely on the Board of Directors of the National Stock Exchange Financial Group and several committees, where he has consistently stood out for his deep industry knowledge, his disciplined pursuit of operational efficiency, and his commitment to strengthening institutional controls.&rdquo;</p>
-                <p class="testimonial-author">Ariel Vishnia</p>
-                <p class="testimonial-role">Former Board Director, National Stock Exchange Financial Group; Chief Financial Officer, BCT Bank</p>
-            </div>
-        </div>
-    </section>
+    <div class="testimonial fade-in">
+        <p>&ldquo;For more than a decade, I have worked alongside Melvin on matters related to Costa Rica&rsquo;s securities and financial sector. Over the past four years, we have collaborated closely on the Board of Directors of the National Stock Exchange Financial Group and several committees, where he has consistently stood out for his deep industry knowledge, his disciplined pursuit of operational efficiency, and his commitment to strengthening institutional controls.&rdquo;</p>
+        <div class="author">Ariel Vishnia &mdash; Former Board Director, National Stock Exchange Financial Group; Chief Financial Officer, BCT Bank</div>
+    </div>
+</section>
 
-    <!-- ============================================
-         BLOCK 5: TEACHING
-         ============================================ -->
-    <section class="section section--gray">
-        <div class="section-container teaching fade-in">
-            <p class="section-label">Academic</p>
-            <h2 class="section-heading">Teaching</h2>
+<!-- TEACHING -->
+<section class="section section-gray fade-in">
+    <h2>Teaching</h2>
+    <p>I serve as <strong>Professor of Business Economics</strong> in the MBA program at <strong>Universidad de Costa Rica</strong>, the country&rsquo;s top-ranked university. In 2025, I received formal recognition for outstanding teaching performance &mdash; with student evaluations above 9/10 and a <span class="teaching-highlight">9.8 rating in subject matter mastery</span>.</p>
+    <p>Teaching is not separate from leadership &mdash; it is an extension of the same conviction: that executive knowledge creates greater institutional value when it can be structured, communicated, and transferred. The discipline required to make complex ideas clear to a classroom is the same discipline required to make strategy legible across an organization.</p>
+</section>
 
-            <p>I serve as <strong>Professor of Business Economics</strong> in the MBA program at <strong>Universidad de Costa Rica</strong>, the country&rsquo;s top-ranked university. In 2025, I received formal recognition for outstanding teaching performance &mdash; with student evaluations above 9/10 and a <strong>9.8 rating in subject matter mastery</strong>.</p>
+<!-- EDUCATION -->
+<section class="section fade-in">
+    <h2>Education</h2>
+    <table class="info-table">
+        <thead><tr><th>Degree</th><th>Institution</th><th>Note</th></tr></thead>
+        <tbody>
+            <tr><td><strong>MBA</strong></td><td>Instituto Tecnol&oacute;gico de Costa Rica</td><td>Summa Cum Laude</td></tr>
+            <tr><td><strong>MSc Applied Mathematics</strong></td><td>Universidad de Costa Rica</td><td><a href="https://repositorio.sibdi.ucr.ac.cr/items/1d5a1cd3-2e9c-419f-a508-899d1bc5190a" target="_blank" style="color:var(--gold)">View thesis &rarr;</a></td></tr>
+            <tr><td><strong>BSc &amp; Licentiate in Economics</strong></td><td>Universidad de Costa Rica</td><td>Student leadership roles</td></tr>
+        </tbody>
+    </table>
+    <div class="exec-ed"><strong>Executive education:</strong> Wharton (Competitive Advantage) &middot; INCAE (Banking &amp; Governance) &middot; J.P. Morgan (Fixed Income &amp; Quantitative Investing)</div>
+</section>
 
-            <p>Teaching is not separate from leadership &mdash; it is an extension of the same conviction: that executive knowledge creates greater institutional value when it can be structured, communicated, and transferred. The discipline required to make complex ideas clear to a classroom is the same discipline required to make strategy legible across an organization.</p>
-        </div>
-    </section>
+<!-- RECOGNITION -->
+<section class="section section-gray fade-in">
+    <h2>Recognition</h2>
+    <table class="info-table">
+        <thead><tr><th>Recognition</th><th>Context</th><th>Year</th></tr></thead>
+        <tbody>
+            <tr><td><strong>National Excellence Award</strong></td><td>BN Valores &mdash; all dimensions of institutional management</td><td>2020</td></tr>
+            <tr><td><strong>International Best Practice Competition</strong></td><td>IBPC &mdash; strategy execution system</td><td>2022</td></tr>
+            <tr><td><strong>Outstanding Teaching Recognition</strong></td><td>UCR MBA Program &mdash; 9.8/10 mastery</td><td>2025</td></tr>
+            <tr><td><strong>State of the Nation Report</strong></td><td>Commissioned research author &mdash; fiscal sustainability</td><td>2012</td></tr>
+        </tbody>
+    </table>
+</section>
 
-    <!-- ============================================
-         BLOCK 6: EDUCATION
-         ============================================ -->
-    <section class="section section--white">
-        <div class="section-container fade-in">
-            <p class="section-label">Credentials</p>
-            <h2 class="section-heading">Education</h2>
+<!-- CAREER PATH -->
+<section class="section fade-in">
+    <h2>Career Path</h2>
+    <table class="info-table">
+        <thead><tr><th>Period</th><th>Role</th><th>Institution</th></tr></thead>
+        <tbody>
+            <tr><td>2024 &ndash; Present</td><td>Deputy General Manager &mdash; Operations</td><td>Banco Nacional de Costa Rica</td></tr>
+            <tr><td>2021 &ndash; Present</td><td>Professor &mdash; Business Economics, MBA</td><td>Universidad de Costa Rica</td></tr>
+            <tr><td>2023 &ndash; 2024</td><td>Deputy General Manager &mdash; Strategy</td><td>Banco Nacional de Costa Rica</td></tr>
+            <tr><td>2018 &ndash; 2023</td><td>General Manager (CEO)</td><td>BN Valores</td></tr>
+            <tr><td>2016 &ndash; 2018</td><td>Head of Trading Desks</td><td>Banco Nacional de Costa Rica</td></tr>
+            <tr><td>2014 &ndash; 2015</td><td>Head of Derivatives &amp; Investments</td><td>Banco Nacional de Costa Rica</td></tr>
+            <tr><td>2013</td><td>Credit Risk Analyst</td><td>Banco Nacional de Costa Rica</td></tr>
+            <tr><td>2005 &ndash; 2013</td><td>Analyst &rarr; Head of Trading &rarr; Interim CEO</td><td>LAFISE Valores</td></tr>
+        </tbody>
+    </table>
+</section>
 
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Degree</th>
-                        <th>Institution</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>MBA</td>
-                        <td>Instituto Tecnol&oacute;gico de Costa Rica</td>
-                        <td><span class="highlight">Summa Cum Laude</span></td>
-                    </tr>
-                    <tr>
-                        <td>MSc Applied Mathematics</td>
-                        <td>Universidad de Costa Rica</td>
-                        <td><a href="https://repositorio.sibdi.ucr.ac.cr/items/1d5a1cd3-2e9c-419f-a508-899d1bc5190a" target="_blank" style="color:var(--gold); text-decoration:none; font-size:0.85rem;">View thesis &rarr;</a></td>
-                    </tr>
-                    <tr>
-                        <td>BSc &amp; Licentiate in Economics</td>
-                        <td>Universidad de Costa Rica</td>
-                        <td><span style="color:var(--light-text); font-size:0.85rem;">Student leadership roles</span></td>
-                    </tr>
-                </tbody>
-            </table>
+<!-- AT A GLANCE -->
+<section class="section section-gray fade-in">
+    <h2>At a Glance</h2>
+    <div class="glance-grid">
+        <div class="glance-item"><div class="glance-label">Current role</div><div class="glance-value">Deputy General Manager &mdash; Operations</div></div>
+        <div class="glance-item"><div class="glance-label">Institution</div><div class="glance-value">Banco Nacional de Costa Rica</div></div>
+        <div class="glance-item"><div class="glance-label">Scale</div><div class="glance-value">~USD 17 billion in assets</div></div>
+        <div class="glance-item"><div class="glance-label">Employees</div><div class="glance-value">1,700+ under direct oversight</div></div>
+        <div class="glance-item"><div class="glance-label">Budget</div><div class="glance-value">~USD 160 million annually</div></div>
+        <div class="glance-item"><div class="glance-label">Board seats</div><div class="glance-value">3 (current and recent)</div></div>
+        <div class="glance-item"><div class="glance-label">Academic</div><div class="glance-value">Professor &mdash; UCR MBA Program</div></div>
+        <div class="glance-item"><div class="glance-label">Based in</div><div class="glance-value">San Jos&eacute;, Costa Rica</div></div>
+    </div>
+</section>
 
-            <p class="exec-education"><strong>Executive education:</strong> Wharton (Competitive Advantage) &middot; INCAE (Banking &amp; Governance) &middot; J.P. Morgan (Fixed Income &amp; Quantitative Investing)</p>
-        </div>
-    </section>
+<!-- WHAT COMES NEXT -->
+<section class="section-navy" style="padding:5rem 2rem">
+    <div class="next fade-in">
+        <h2>What Comes Next</h2>
+        <p>The next chapter is not about scale for its own sake. It is about leading an institution where governance, strategy, capital, and culture operate as one coherent system &mdash; and where the quality of leadership determines whether they do.</p>
+    </div>
+</section>
 
-    <!-- ============================================
-         BLOCK 7: RECOGNITION
-         ============================================ -->
-    <section class="section section--gray">
-        <div class="section-container fade-in">
-            <p class="section-label">Recognition</p>
-            <h2 class="section-heading">Recognition</h2>
+<!-- CTA -->
+<section class="cta-section" id="connect">
+    <h3>Connect</h3>
+    <p>Writing, teaching, and thinking about how financial institutions create lasting value.</p>
+    <div class="cta-links">
+        <a href="https://linkedin.com/in/melvingarita" target="_blank">LinkedIn</a>
+        <a href="mailto:melvin@melvingarita.com">melvin@melvingarita.com</a>
+    </div>
+</section>
 
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Recognition</th>
-                        <th>Context</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>National Excellence Award</td>
-                        <td>BN Valores &mdash; recognition across all dimensions of institutional management</td>
-                        <td>2020</td>
-                    </tr>
-                    <tr>
-                        <td>International Best Practice Competition</td>
-                        <td>IBPC &mdash; international recognition of strategy execution system</td>
-                        <td>2022</td>
-                    </tr>
-                    <tr>
-                        <td>Outstanding Teaching Recognition</td>
-                        <td>UCR MBA Program &mdash; 9.8/10 subject mastery rating</td>
-                        <td>2025</td>
-                    </tr>
-                    <tr>
-                        <td>State of the Nation Report</td>
-                        <td>Commissioned research author &mdash; fiscal sustainability in Costa Rica</td>
-                        <td>2012</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+<!-- FOOTER -->
+<footer class="footer">
+    <p>&copy; 2026 Melvin Garita Mora &middot; San Jos&eacute;, Costa Rica</p>
+    <p style="margin-top:.5rem"><a href="https://linkedin.com/in/melvingarita" target="_blank">LinkedIn</a> &middot; <a href="mailto:melvin@melvingarita.com">melvin@melvingarita.com</a></p>
+</footer>
 
-    <!-- ============================================
-         BLOCK 8: CAREER PATH — DETAILED REFERENCE
-         ============================================ -->
-    <section class="section section--white">
-        <div class="section-container fade-in">
-            <p class="section-label">Reference</p>
-            <h2 class="section-heading">Career Path</h2>
-
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Period</th>
-                        <th>Role</th>
-                        <th>Institution</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2024 &ndash; Present</td>
-                        <td>Deputy General Manager &mdash; Operations</td>
-                        <td>Banco Nacional de Costa Rica</td>
-                    </tr>
-                    <tr>
-                        <td>2021 &ndash; Present</td>
-                        <td>Professor &mdash; Business Economics, MBA</td>
-                        <td>Universidad de Costa Rica</td>
-                    </tr>
-                    <tr>
-                        <td>2023 &ndash; 2024</td>
-                        <td>Deputy General Manager &mdash; Strategy</td>
-                        <td>Banco Nacional de Costa Rica</td>
-                    </tr>
-                    <tr>
-                        <td>2018 &ndash; 2023</td>
-                        <td>General Manager (CEO)</td>
-                        <td>BN Valores</td>
-                    </tr>
-                    <tr>
-                        <td>2016 &ndash; 2018</td>
-                        <td>Head of Trading Desks</td>
-                        <td>Banco Nacional de Costa Rica</td>
-                    </tr>
-                    <tr>
-                        <td>2014 &ndash; 2015</td>
-                        <td>Head of Derivatives &amp; Investments</td>
-                        <td>Banco Nacional de Costa Rica</td>
-                    </tr>
-                    <tr>
-                        <td>2013</td>
-                        <td>Credit Risk Analyst</td>
-                        <td>Banco Nacional de Costa Rica</td>
-                    </tr>
-                    <tr>
-                        <td>2004 &ndash; 2013</td>
-                        <td>Analyst &rarr; Head of Trading &rarr; Interim CEO</td>
-                        <td>LAFISE Valores / BANEX Valores</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- ============================================
-         BLOCK 9: AT A GLANCE
-         ============================================ -->
-    <section class="section section--gray">
-        <div class="section-container fade-in">
-            <p class="section-label">Quick Reference</p>
-            <h2 class="section-heading">At a Glance</h2>
-
-            <div class="glance-grid">
-                <div class="glance-item">
-                    <p class="glance-label">Current Role</p>
-                    <p class="glance-value">Deputy General Manager &mdash; Operations</p>
-                </div>
-                <div class="glance-item">
-                    <p class="glance-label">Institution</p>
-                    <p class="glance-value">Banco Nacional de Costa Rica</p>
-                </div>
-                <div class="glance-item">
-                    <p class="glance-label">Scale</p>
-                    <p class="glance-value">~USD 17 billion in assets</p>
-                </div>
-                <div class="glance-item">
-                    <p class="glance-label">Employees</p>
-                    <p class="glance-value">1,700+ under direct oversight</p>
-                </div>
-                <div class="glance-item">
-                    <p class="glance-label">Budget</p>
-                    <p class="glance-value">~USD 160 million annually</p>
-                </div>
-                <div class="glance-item">
-                    <p class="glance-label">Board Seats</p>
-                    <p class="glance-value">3 (current and recent)</p>
-                </div>
-                <div class="glance-item">
-                    <p class="glance-label">Academic</p>
-                    <p class="glance-value">Professor &mdash; UCR MBA Program</p>
-                </div>
-                <div class="glance-item">
-                    <p class="glance-label">Based In</p>
-                    <p class="glance-value">San Jos&eacute;, Costa Rica</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         BLOCK 10: WHAT COMES NEXT
-         ============================================ -->
-    <section class="section section--white" style="padding: 6rem 2rem;">
-        <div class="what-next fade-in">
-            <p class="section-label" style="text-align:center;">What Comes Next</p>
-            <p>The next chapter is not about scale for its own sake. It is about leading an institution where governance, strategy, capital, and culture operate as one coherent system &mdash; and where the quality of leadership determines whether they do.</p>
-        </div>
-    </section>
-
-    <!-- ============================================
-         BLOCK 11: CTA
-         ============================================ -->
-    <section class="cta-section" id="connect">
-        <h2 class="cta-heading">Connect</h2>
-        <p class="cta-sub">Writing, teaching, and thinking about how financial institutions create lasting value.</p>
-        <div class="cta-links">
-            <a href="https://linkedin.com/in/melvingarita" target="_blank">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                LinkedIn
-            </a>
-            <a href="mailto:melvin@melvingarita.com">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13L2 4"/></svg>
-                melvin@melvingarita.com
-            </a>
-        </div>
-    </section>
-
-    <!-- ============================================
-         FOOTER
-         ============================================ -->
-    <footer class="footer">
-        <p>&copy; 2026 Melvin Garita Mora &middot; San Jos&eacute;, Costa Rica &middot;
-            <a href="https://linkedin.com/in/melvingarita" target="_blank">LinkedIn</a> &middot;
-            <a href="mailto:melvin@melvingarita.com">melvin@melvingarita.com</a>
-        </p>
-    </footer>
-
-    <!-- ============================================
-         SCROLL ANIMATION
-         ============================================ -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const fadeEls = document.querySelectorAll('.fade-in');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-            fadeEls.forEach(el => observer.observe(el));
-        });
-    </script>
+<script>
+const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible')}})},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
